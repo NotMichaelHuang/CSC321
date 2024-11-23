@@ -1,8 +1,8 @@
 import random
 
-from CBC import CipherBlockChaining
-from common_house import CommonHouse
-from diffie_hellman_eq import DiffieHellmanEquation
+from Assignment3Class.CBC import CipherBlockChaining
+from Assignment3Class.common_house import CommonHouse
+from Assignment3Class.diffie_hellman_eq import DiffieHellmanEquation
 
 
 def main():

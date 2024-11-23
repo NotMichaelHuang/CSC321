@@ -1,3 +1,6 @@
+from hash_module import HashObject
+
+
 # Function to flip a specific bit in a binary string
 def flip_bit(binary_string, index):
     bit_list = list(binary_string)
@@ -20,3 +23,7 @@ flipped_string = ''.join(chr(int(flipped_binary[i:i+8], 2)) for i in range(0, le
 # Print the two strings with Hamming distance of 1
 print("Original String:", original_string)
 print("Flipped String:", flipped_string)
+
+hash_obj = HashObject()
+print(hash_obj.get_digest(original_string))
+print(hash_obj.get_digest(flipped_string))

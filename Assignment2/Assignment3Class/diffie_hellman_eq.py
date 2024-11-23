@@ -1,6 +1,3 @@
-import hashlib
-
-
 class DiffieHellmanEquation():
     def __init__(self, private_number: int):
         self.private = private_number

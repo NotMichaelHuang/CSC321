@@ -34,17 +34,22 @@ class RSAKey():
         return pow(int_text, self.e, self.n)    
 
 
-    def decrypt(self, key: int) -> str:
+    def decrypt(self, key: int) -> int:
         # Decryption C^d % n (DC)`
-        de_msg = pow(key, self.d, self.n)
-        hex_msg = hex(de_msg)
-        import pdb; pdb.set_trace()
+        return pow(key, self.d, self.n) 
         
+    
+    def decrypt_to_str(self, int_msg: int) -> str:
+        if int_msg == 0:
+            hex_msg = f"{0:02x}" # Output 0x00
+        else:
+            hex_msg = hex(int_msg)
+ 
         # remove the 0x
         hex_msg = hex_msg[2:]
         bytes_msg = bytes.fromhex(hex_msg)
         bin_msg = bytes_msg.decode('utf-8')
         de_de_msg = bin_msg
 
-        return de_de_msg
+        return de_de_msg 
 
